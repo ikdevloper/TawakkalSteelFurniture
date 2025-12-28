@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tawakkal Steel Furniture | Quality Steel Furniture in Hyderabad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e40af;
+            --secondary: #dc2626;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --dark: #1e293b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .slide-in-left {
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+        }
+        
+        .slide-in-left.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .slide-in-right {
+            transform: translateX(50px);
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+        }
+        
+        .slide-in-right.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .review-card {
+            background: linear-gradient(145deg, #ffffff, #f1f5f9);
+            box-shadow: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+        }
+        
+        .custom-border {
+            position: relative;
+        }
+        
+        .custom-border::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+        }
+        
+        .header-bg {
+            background: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .product-bg {
+            background: linear-gradient(rgba(248, 250, 252, 0.9), rgba(248, 250, 252, 0.9)), url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .rating-stars {
+            color: #fbbf24;
+        }
+        
+        .telugu-text {
+            font-family: 'Noto Sans Telugu', sans-serif;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+        
+        /* Map placeholder */
+        .map-placeholder {
+            background: linear-gradient(45deg, #e0e7ff, #f1f5f9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mr-3">
+                    <i class="fas fa-industry text-white text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-blue-800">Tawakkal Steel Furniture</h1>
+                    <p class="text-xs text-gray-600">టవక్కల్ స్టీల్ ఫర్నిచర్</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-700 font-medium hover:text-blue-900 transition">Home</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-blue-700 transition">About</a>
+                <a href="#products" class="text-gray-700 font-medium hover:text-blue-700 transition">Products</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-blue-700 transition">Services</a>
+                <a href="#reviews" class="text-gray-700 font-medium hover:text-blue-700 transition">Reviews</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-blue-700 transition">Contact</a>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-blue-800">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 h-full w-64 bg-white shadow-lg p-6">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-xl font-bold text-blue-800">Menu</h2>
+                <button id="close-menu" class="text-gray-700">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="#home" class="text-blue-700 font-medium text-lg">Home</a>
+                <a href="#about" class="text-gray-700 font-medium text-lg">About Us</a>
+                <a href="#products" class="text-gray-700 font-medium text-lg">Products</a>
+                <a href="#services" class="text-gray-700 font-medium text-lg">Services</a>
+                <a href="#reviews" class="text-gray-700 font-medium text-lg">Reviews</a>
+                <a href="#contact" class="text-gray-700 font-medium text-lg">Contact</a>
+                <div class="pt-6 border-t">
+                    <p class="text-gray-700 font-medium">Call us:</p>
+                    <a href="tel:09247422197" class="text-blue-700 font-bold text-lg">092474 22197</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="header-bg text-white pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <div class="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
+                        <i class="fas fa-star mr-2"></i>Rated 4.3/5 (36 Reviews)
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Strong Steel. Perfect Finish.</h1>
+                    <p class="text-xl mb-6">Custom Steel Furniture at Wholesale Prices</p>
+                    <p class="text-lg mb-8 opacity-90">Tawakkal Steel Furniture offers premium quality steel furniture with custom designs, machinery work, and expert finishing. Serving Hyderabad with excellence for years.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg text-lg text-center transition duration-300 pulse">
+                            <i class="fas fa-phone-alt mr-2"></i>Contact Now
+                        </a>
+                        <a href="#products" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-8 rounded-lg text-lg text-center transition duration-300">
+                            <i class="fas fa-chair mr-2"></i>View Products
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center slide-in-right">
+                    <div class="bg-white rounded-2xl p-1 shadow-2xl max-w-md">
+                        <div class="bg-gradient-to-r from-blue-700 to-blue-800 rounded-xl p-6 text-center">
+                            <div class="text-amber-400 text-6xl mb-4">
+                                <i class="fas fa-couch"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Custom Almirah Designs</h3>
+                            <p class="text-blue-100 mb-4">As per customer wish with premium finishing</p>
+                            <div class="flex justify-center space-x-4">
+                                <div class="bg-blue-900 rounded-lg p-3 text-center">
+                                    <div class="text-white text-2xl font-bold">36+</div>
+                                    <div class="text-blue-300 text-sm">Reviews</div>
+                                </div>
+                                <div class="bg-blue-900 rounded-lg p-3 text-center">
+                                    <div class="text-white text-2xl font-bold">100%</div>
+                                    <div class="text-blue-300 text-sm">Customizable</div>
+                                </div>
+                                <div class="bg-blue-900 rounded-lg p-3 text-center">
+                                    <div class="text-white text-2xl font-bold">⚡</div>
+                                    <div class="text-blue-300 text-sm">Same-Day Delivery</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 custom-border inline-block">About Our Business</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-6">With years of experience in steel furniture manufacturing, we deliver quality craftsmanship and durable products that last.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 slide-in-left">
+                    <div class="bg-gradient-to-br from-blue-50 to-gray-100 p-8 rounded-2xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Tawakkal Steel Furniture</h3>
+                        <div class="mb-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Our Expertise</h4>
+                            <p class="text-gray-700">We specialize in manufacturing high-quality steel furniture with precision machinery work and expert finishing. Our team works closely with customers to create custom designs that fit their specific needs and space requirements.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-tools text-blue-700"></i>
+                                </div>
+                                <span class="font-medium">Machinery Work</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-paint-roller text-blue-700"></i>
+                                </div>
+                                <span class="font-medium">Finishing Work</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-hammer text-blue-700"></i>
+                                </div>
+                                <span class="font-medium">Fabrication</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                                    <i class="fas fa-shipping-fast text-blue-700"></i>
+                                </div>
+                                <span class="font-medium">Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-12 slide-in-right">
+                    <div class="bg-gray-800 text-white rounded-2xl p-8 shadow-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">Business Information</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-amber-400"><i class="fas fa-map-marker-alt mr-2"></i>Location</h4>
+                                <p class="text-gray-300">Moin Bagh, Fateh Shah Nagar, Santosh Nagar, Hyderabad, Telangana – 500059</p>
+                                <p class="text-gray-400 mt-1">Plus Code: 8FWV+9Q, Hyderabad, Telangana</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-amber-400"><i class="fas fa-phone-alt mr-2"></i>Contact</h4>
+                                <a href="tel:09247422197" class="text-xl font-bold text-white hover:text-amber-300 transition">092474 22197</a>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-2 text-amber-400"><i class="fas fa-store mr-2"></i>Shopping Options</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">🚚 Delivery Available</span>
+                                    <span class="bg-blue-700 px-3 py-1 rounded-full text-sm">🏬 In-Store Shopping</span>
+                                    <span class="bg-green-700 px-3 py-1 rounded-full text-sm">⚡ Same-Day Delivery</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="product-bg py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 custom-border inline-block">Our Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-6">We manufacture a wide range of steel furniture products with custom designs to meet your needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover fade-in">
+                    <div class="h-48 bg-gradient-to-r from-blue-600 to-blue-800 flex items-center justify-center">
+                        <i class="fas fa-archive text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Steel Almirah</h3>
+                        <p class="text-gray-600 mb-4">Custom designed steel almirahs as per customer requirements with secure locking systems.</p>
+                        <div class="text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover fade-in" style="animation-delay: 0.1s">
+                    <div class="h-48 bg-gradient-to-r from-blue-700 to-blue-900 flex items-center justify-center">
+                        <i class="fas fa-bed text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Steel Beds</h3>
+                        <p class="text-gray-600 mb-4">Durable and stylish steel beds with modern designs and strong frameworks for long-lasting use.</p>
+                        <div class="text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover fade-in" style="animation-delay: 0.2s">
+                    <div class="h-48 bg-gradient-to-r from-blue-800 to-blue-900 flex items-center justify-center">
+                        <i class="fas fa-th text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Steel Racks</h3>
+                        <p class="text-gray-600 mb-4">Storage racks for homes, offices, and commercial spaces with customizable dimensions.</p>
+                        <div class="text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg card-hover fade-in" style="animation-delay: 0.3s">
+                    <div class="h-48 bg-gradient-to-r from-blue-900 to-blue-950 flex items-center justify-center">
+                        <i class="fas fa-cogs text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Custom Furniture</h3>
+                        <p class="text-gray-600 mb-4">Tailor-made steel furniture designed to your specifications, space, and functional requirements.</p>
+                        <div class="text-amber-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 custom-border inline-block">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-6">Comprehensive steel furniture solutions from design to delivery.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover slide-in-left">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-industry text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Steel Furniture Manufacturing</h3>
+                    <p class="text-gray-600">We manufacture high-quality steel furniture using premium materials and advanced techniques for durability and aesthetics.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-ruler text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Custom Almirah Design</h3>
+                    <p class="text-gray-600">Create your perfect storage solution with our custom almirah designs tailored to your space, style, and storage needs.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover slide-in-right">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-warehouse text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Wholesale & Retail</h3>
+                    <p class="text-gray-600">We cater to both wholesale and retail customers with competitive pricing and bulk order discounts.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover slide-in-left">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cogs text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Machinery Work</h3>
+                    <p class="text-gray-600">Precision machinery work for accurate cutting, bending, and shaping of steel components.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover fade-in">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-spray-can text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Finishing & Fabrication</h3>
+                    <p class="text-gray-600">Professional finishing with powder coating, painting, and fabrication for a polished final product.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover slide-in-right">
+                    <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shipping-fast text-blue-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Delivery Service</h3>
+                    <p class="text-gray-600">Reliable delivery services including same-day delivery option for urgent requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 custom-border inline-block">Customer Reviews</h2>
+                <div class="flex items-center justify-center mt-6">
+                    <div class="text-amber-500 text-3xl mr-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div>
+                        <p class="text-2xl font-bold text-gray-800">4.3 / 5</p>
+                        <p class="text-gray-600">Based on 36 reviews</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="review-card rounded-xl p-6 fade-in">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rahul Kumar</h4>
+                            <div class="text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Wholesale prices with custom almirah designs. I ordered 10 almirahs for my hostel and got them delivered on time with excellent finishing."</p>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card rounded-xl p-6 fade-in" style="animation-delay: 0.1s">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Priya Sharma</h4>
+                            <div class="text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Good finishing and machinery work. The steel bed I purchased is very sturdy and looks modern. Prices vary depending on design and quality."</p>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card rounded-xl p-6 fade-in" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-blue-700 text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Anil Reddy</h4>
+                            <div class="text-amber-500">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Excellent custom furniture service. They made a steel rack exactly as per my specifications. The finishing is perfect and the delivery was prompt."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 custom-border inline-block">Contact Us</h2>
+                <p class="text-blue-100 max-w-2xl mx-auto mt-6">Visit our store or get in touch for custom furniture solutions</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-8 slide-in-left">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-xl font-semibold mb-4 text-amber-300"><i class="fas fa-clock mr-2"></i>Business Hours</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between border-b border-blue-300/30 pb-2">
+                                    <span>Monday - Thursday</span>
+                                    <span class="font-medium">10:00 AM – 10:00 PM</span>
+                                </div>
+                                <div class="flex justify-between border-b border-blue-300/30 pb-2">
+                                    <span>Friday - Saturday</span>
+                                    <span class="font-medium">10:00 AM – 10:00 PM</span>
+                                </div>
+                                <div class="flex justify-between pb-2">
+                                    <span class="text-red-300">Sunday</span>
+                                    <span class="font-medium text-red-300">Closed</span>
+                                </div>
+                                <p class="text-blue-200 text-sm mt-2">*Hours may differ on holidays</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <h4 class="text-xl font-semibold mb-4 text-amber-300"><i class="fas fa-info-circle mr-2"></i>Quick Contact</h4>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Our Address</p>
+                                        <p class="text-blue-200">Moin Bagh, Fateh Shah Nagar, Santosh Nagar, Hyderabad</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-10 h-10 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Call Us</p>
+                                        <a href="tel:09247422197" class="text-xl font-bold hover:text-amber-300 transition">092474 22197</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4 text-amber-300"><i class="fas fa-tags mr-2"></i>Tagline</h4>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="bg-blue-700 px-4 py-2 rounded-full">Strong Steel. Perfect Finish.</span>
+                                <span class="bg-blue-700 px-4 py-2 rounded-full">Custom Steel Furniture at Wholesale Prices</span>
+                                <span class="bg-blue-700 px-4 py-2 rounded-full">Quality Steel Furniture You Can Trust</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:pl-8 slide-in-right">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Visit Our Store</h3>
+                        
+                        <!-- Map Placeholder -->
+                        <div class="map-placeholder rounded-xl h-64 mb-8">
+                            <div class="text-center">
+                                <i class="fas fa-map-marked-alt text-5xl text-blue-300 mb-4"></i>
+                                <p class="text-blue-200 font-medium">Location Map</p>
+                                <p class="text-blue-300">Moin Bagh, Fateh Shah Nagar, Santosh Nagar, Hyderabad</p>
+                                <p class="text-blue-300 mt-2">Plus Code: 8FWV+9Q, Hyderabad</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-blue-900/50 rounded-xl p-6">
+                            <h4 class="text-xl font-semibold mb-4 text-amber-300">Why Choose Us?</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                                    <span>Custom designs as per customer requirements</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                                    <span>Wholesale pricing for bulk orders</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                                    <span>Same-day delivery available</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                                    <span>Expert machinery and finishing work</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-green-400 mt-1 mr-3"></i>
+                                    <span>Years of experience in steel furniture manufacturing</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 text-center">
+                            <a href="tel:09247422197" class="bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 px-8 rounded-lg text-lg inline-block transition duration-300">
+                                <i class="fas fa-phone-alt mr-2"></i>Call Now for Inquiry
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-industry text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-bold">Tawakkal Steel Furniture</h2>
+                            <p class="text-gray-400 text-sm">టవక్కల్ స్టీల్ ఫర్నిచర్</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-gray-400 max-w-md">Manufacturers of quality steel furniture with custom designs, machinery work, and expert finishing in Hyderabad.</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-2xl font-bold mb-2">
+                        <a href="tel:09247422197">092474 22197</a>
+                    </p>
+                    <p class="text-gray-400 mb-4">Open Monday-Saturday, 10AM-10PM</p>
+                    <div class="flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-600 transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Tawakkal Steel Furniture. All rights reserved. | Designed for Hyderabad customers</p>
+                <p class="mt-2 text-sm">Furniture Store - Steel Furniture & Machinery Work</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919247422197" target="_blank" class="fixed bottom-6 right-6 bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-green-700 transition transform hover:scale-110 z-40">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to top -->
+    <button id="scrollTop" class="fixed bottom-6 left-6 bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-blue-800 transition opacity-0 z-40">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuButton = document.getElementById('close-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+        
+        closeMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+        
+        // Scroll to top button
+        const scrollTopButton = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopButton.style.opacity = '1';
+            } else {
+                scrollTopButton.style.opacity = '0';
+            }
+        });
+        
+        scrollTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements with animation classes
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Initialize with some elements already visible
+        window.addEventListener('load', () => {
+            // Make sure hero section is visible immediately
+            const heroElements = document.querySelectorAll('#home .fade-in, #home .slide-in-right');
+            heroElements.forEach(el => {
+                el.classList.add('visible');
+            });
+        });
+        
+        // Business hours highlighting for current day
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const today = new Date().getDay();
+        const todayName = days[today];
+        
+        // Highlight today in business hours
+        document.addEventListener('DOMContentLoaded', () => {
+            const businessHours = document.querySelectorAll('#contact .flex.justify-between');
+            businessHours.forEach(div => {
+                if (div.textContent.includes(todayName)) {
+                    div.classList.add('bg-blue-800/30', 'rounded-lg', 'px-3', 'py-2');
+                    const span = div.querySelector('span');
+                    if (span && span.textContent === todayName) {
+                        span.classList.remove('text-red-300');
+                        span.classList.add('text-amber-300', 'font-bold');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
